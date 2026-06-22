@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.kapt)
-    # alias(libs.plugins.kotlin.compose) // Removed for Kotlin 1.9
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
