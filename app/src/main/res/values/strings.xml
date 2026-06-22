@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">三餐规划</string>
+    
+    <!-- 通用文本 -->
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="loading">加载中...</string>
+    <string name="error">出错了</string>
+    <string name="retry">重试</string>
+    
+    <!-- 主页 -->
+    <string name="home_title">三餐规划</string>
+    <string name="home_subtitle">智能管理你的每日饮食</string>
+    
+    <!-- 体重追踪 -->
+    <string name="weight_title">体重追踪</string>
+    <string name="weight_add_title">记录体重</string>
+    <string name="weight_chart_title">体重趋势</string>
+    <string name="weight_current">当前体重</string>
+    <string name="weight_bmi">BMI</string>
+    <string name="weight_target">目标体重</string>
+    
+    <!-- 食物库存 -->
+    <string name="inventory_title">食物库存</string>
+    <string name="inventory_add_title">添加食材</string>
+    <string name="inventory_scan_title">扫码入库</string>
+    <string name="inventory_import_title">账单导入</string>
+    <string name="inventory_expiring">临期食材</string>
+    <string name="inventory_empty">库存为空，快去添加吧！</string>
+    
+    <!-- 三餐规划 -->
+    <string name="meal_plan_title">三餐规划</string>
+    <string name="meal_breakfast">早餐</string>
+    <string name="meal_lunch">午餐</string>
+    <string name="meal_dinner">晚餐</string>
+    <string name="meal_snack">加餐</string>
+    <string name="generate_meal">生成三餐</string>
+    <string name="confirm_meal">确认用餐</string>
+    <string name="modify_meal">修改</string>
+    
+    <!-- 购物清单 -->
+    <string name="shopping_title">购物清单</string>
+    <string name="shopping_empty">购物清单为空</string>
+    <string name="shopping_generate">生成清单</string>
+    <string name="shopping_mark_purchased">标记已购买</string>
+    
+    <!-- 运动追踪 -->
+    <string name="fitness_title">运动追踪</string>
+    <string name="fitness_add_title">记录运动</string>
+    <string name="fitness_connect_title">连接健康应用</string>
+    
+    <!-- 报告 -->
+    <string name="reports_title">报告</string>
+    <string name="report_daily">日报</string>
+    <string name="report_weekly">周报</string>
+    <string name="report_monthly">月报</string>
+    
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="settings_profile">个人资料</string>
+    <string name="settings_llm">LLM 配置</string>
+    <string name="settings_notifications">通知设置</string>
+    <string name="settings_data">数据管理</string>
+    
+    <!-- 通知 -->
+    <string name="notification_channel_meal_reminder">用餐提醒</string>
+    <string name="notification_channel_weight_reminder">体重记录提醒</string>
+    <string name="notification_channel_expiry_alert">食材过期提醒</string>
+    <string name="notification_channel_weekly_report">周报通知</string>
+    <string name="notification_channel_monthly_report">月报通知</string>
+</resources>
