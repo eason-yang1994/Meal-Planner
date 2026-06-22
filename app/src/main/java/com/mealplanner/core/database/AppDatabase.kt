@@ -20,7 +20,9 @@ import javax.inject.Singleton
         com.mealplanner.userprofile.data.local.UserProfileEntity::class,
         com.mealplanner.weight.data.local.WeightRecordEntity::class,
         com.mealplanner.inventory.data.local.InventoryEntity::class,
-        com.mealplanner.mealplan.data.local.MealPlanEntity::class
+        com.mealplanner.mealplan.data.local.MealPlanEntity::class,
+        com.mealplanner.fitness.data.local.ExerciseRecordEntity::class,
+        com.mealplanner.notifications.data.local.NotificationEntity::class
     ],
     version = 1,
     exportSchema = true

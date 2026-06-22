@@ -1,30 +1,61 @@
 package com.mealplanner.navigation
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.FitnessCenter
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Restaurant
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.NavDestination.Companion.hierarchy
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.mealplanner.home.presentation.HomeScreen
+import com.mealplanner.profile.presentation.ProfileScreen
 import com.mealplanner.userprofile.domain.usecase.GetUserProfileUseCase
 import com.mealplanner.userprofile.presentation.setup.SetupWizardScreen
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.first
-import javax.inject.Inject
+
+/**
+ * 底部导航项
+ */
+data class BottomNavItem(
+    val route: String,
+    val icon: ImageVector,
+    val label: String
+)
 
 /**
  * 应用导航 Host
  * 
- * 定义应用的导航图
+ * 定义应用的导航图，包含底部导航栏
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppNavHost(
     navController: NavHostController = rememberNavController(),
@@ -37,89 +68,118 @@ fun AppNavHost(
     val viewModel: AppNavHostViewModel = hiltViewModel()
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     
-    LaunchedEffect(uiState.isProfileChecked) {
+    // 底部导航项
+    val bottomNavItems = listOf(
+        BottomNavItem(NavRoutes.HOME, Icons.Default.Home, "首页"),
+        BottomNavItem("meal_plan", Icons.Default.Restaurant, "饮食"),
+        BottomNavItem("fitness", Icons.Default.FitnessCenter, "运动"),
+        BottomNavItem("reports", Icons.Default.List, "报告"),
+        BottomNavItem("profile", Icons.Default.Person, "我的")
+    )
+    
+    // 需要显示底部导航的路由
+    val routesWithBottomNav = listOf(NavRoutes.HOME, "meal_plan", "fitness", "reports", "profile")
+    
+    // 当前路由
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
+    
+    // 是否显示底部导航
+    val showBottomNav = currentRoute in routesWithBottomNav
+    
+    // 等待检查完成
+    if (startDestination == null) {
         if (uiState.isProfileChecked) {
             startDestination = if (uiState.isProfileExists) {
                 NavRoutes.HOME
             } else {
                 NavRoutes.SETUP_WIZARD
             }
+        } else {
+            // 还在检查中，显示加载界面
+            androidx.compose.foundation.layout.Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                androidx.compose.material3.CircularProgressIndicator()
+            }
+            return
         }
     }
     
-    // 等待检查完成
-    if (startDestination == null) {
-        PlaceholderScreen(
-            title = "三餐规划",
-            subtitle = "正在加载..."
-        )
-        return
-    }
-    
-    NavHost(
-        navController = navController,
-        startDestination = startDestination!!,
-        modifier = modifier
-    ) {
-        // 设置向导
-        composable(NavRoutes.SETUP_WIZARD) {
-            SetupWizardScreen(navController = navController)
+    Scaffold(
+        bottomBar = {
+            AnimatedVisibility(
+                visible = showBottomNav,
+                enter = slideInVertically { it },
+                exit = slideOutVertically { it }
+            ) {
+                NavigationBar {
+                    bottomNavItems.forEach { item ->
+                        val selected = currentRoute == item.route
+                        NavigationBarItem(
+                            selected = selected,
+                            onClick = {
+                                navController.navigate(item.route) {
+                                    // 避免重复导航到同一目的地
+                                    popUpTo(navController.graph.findStartDestination().id) {
+                                        saveState = true
+                                    }
+                                    // 确保在顶部启动目的地
+                                    launchSingleTop = true
+                                    // 恢复状态
+                                    restoreState = true
+                                }
+                            },
+                            icon = {
+                                Icon(
+                                    imageVector = item.icon,
+                                    contentDescription = item.label
+                                )
+                            },
+                            label = { Text(item.label) }
+                        )
+                    }
+                }
+            }
         }
-        
-        // 首页
-        composable(NavRoutes.HOME) {
-            HomeScreen(navController = navController)
-        }
-        
-        // 体重追踪
-        composable(NavRoutes.WEIGHT) {
-            WeightScreen(navController = navController)
-        }
-        
-        // 库存管理
-        composable("inventory") {
-            InventoryScreen(navController = navController)
-        }
-        
-        // 三餐规划
-        composable("meal_plan") {
-            MealPlanScreen(navController = navController)
-        }
-    }
-}
-
-/**
- * 占位屏组件
- */
-@Composable
-fun PlaceholderScreen(
-    title: String,
-    subtitle: String,
-    modifier: Modifier = Modifier
-) {
-    androidx.compose.foundation.layout.Box(
-        modifier = modifier.fillMaxSize(),
-        contentAlignment = androidx.compose.ui.Alignment.Center
-    ) {
-        androidx.compose.foundation.layout.Column(
-            horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally,
-            verticalArrangement = androidx.compose.foundation.layout.Arrangement.Center
+    ) { paddingValues ->
+        NavHost(
+            navController = navController,
+            startDestination = startDestination!!,
+            modifier = modifier.padding(paddingValues)
         ) {
-            androidx.compose.material3.Text(
-                text = title,
-                style = androidx.compose.material3.MaterialTheme.typography.headlineLarge,
-                color = androidx.compose.material3.MaterialTheme.colorScheme.primary
-            )
+            // 设置向导
+            composable(NavRoutes.SETUP_WIZARD) {
+                SetupWizardScreen(navController = navController)
+            }
             
-            androidx.compose.foundation.layout.Spacer(
-                modifier = Modifier.height(androidx.compose.ui.unit.dp(16))
-            )
+            // 首页
+            composable(NavRoutes.HOME) {
+                HomeScreen(navController = navController)
+            }
             
-            androidx.compose.material3.Text(
-                text = subtitle,
-                style = androidx.compose.material3.MaterialTheme.typography.bodyMedium,
-                color = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant
-            )
+            // 饮食（三餐规划）
+            composable("meal_plan") {
+                com.mealplanner.mealplan.presentation.mealplan.MealPlanScreen(
+                    navController = navController
+                )
+            }
+            
+            // 运动
+            composable("fitness") {
+                com.mealplanner.fitness.presentation.fitness.FitnessScreen()
+            }
+            
+            // 报告
+            composable("reports") {
+                com.mealplanner.reports.presentation.reports.ReportsScreen()
+            }
+            
+            // 我的（个人资料）
+            composable("profile") {
+                ProfileScreen()
+            }
         }
     }
 }
