@@ -18,7 +18,9 @@ import javax.inject.Singleton
 @Database(
     entities = [
         com.mealplanner.userprofile.data.local.UserProfileEntity::class,
-        com.mealplanner.weight.data.local.WeightRecordEntity::class
+        com.mealplanner.weight.data.local.WeightRecordEntity::class,
+        com.mealplanner.inventory.data.local.InventoryEntity::class,
+        com.mealplanner.mealplan.data.local.MealPlanEntity::class
     ],
     version = 1,
     exportSchema = true

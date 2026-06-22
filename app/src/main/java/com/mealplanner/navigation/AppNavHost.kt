@@ -76,9 +76,15 @@ fun AppNavHost(
             WeightScreen(navController = navController)
         }
         
-        // 后续添加其他页面的路由
-        // composable(NavRoutes.INVENTORY) { InventoryScreen(navController) }
-        // composable(NavRoutes.MEAL_PLAN) { MealPlanScreen(navController) }
+        // 库存管理
+        composable("inventory") {
+            InventoryScreen(navController = navController)
+        }
+        
+        // 三餐规划
+        composable("meal_plan") {
+            MealPlanScreen(navController = navController)
+        }
     }
 }
 
