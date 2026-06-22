@@ -14,20 +14,11 @@ import javax.inject.Singleton
 
 /**
  * Room 数据库配置
- * 
- * 目前 entities 为空，后续添加实体类
  */
 @Database(
     entities = [
-        // 后续添加实体类
-        // UserProfileEntity::class,
-        // WeightRecordEntity::class,
-        // InventoryItemEntity::class,
-        // InventoryTransactionEntity::class,
-        // MealPlanEntity::class,
-        // RecipeEntity::class,
-        // FitnessRecordEntity::class,
-        // ShoppingItemEntity::class
+        com.mealplanner.userprofile.data.local.UserProfileEntity::class,
+        com.mealplanner.weight.data.local.WeightRecordEntity::class
     ],
     version = 1,
     exportSchema = true

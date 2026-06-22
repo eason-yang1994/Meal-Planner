@@ -1,38 +1,84 @@
 package com.mealplanner.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.mealplanner.navigation.NavRoutes.HOME
+import androidx.navigation.compose.rememberNavController
+import com.mealplanner.home.presentation.HomeScreen
+import com.mealplanner.userprofile.domain.usecase.GetUserProfileUseCase
+import com.mealplanner.userprofile.presentation.setup.SetupWizardScreen
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.first
+import javax.inject.Inject
 
 /**
  * 应用导航 Host
  * 
- * 定义应用的导航图，目前只有占位屏
+ * 定义应用的导航图
  */
 @Composable
 fun AppNavHost(
-    navController: NavHostController = androidx.navigation.compose.rememberNavController(),
+    navController: NavHostController = rememberNavController(),
     modifier: Modifier = Modifier
 ) {
+    // 检查用户资料是否存在，决定起始目的地
+    var startDestination by remember { mutableStateOf<String?>(null) }
+    
+    // 检查用户是否已设置
+    val viewModel: AppNavHostViewModel = hiltViewModel()
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    
+    LaunchedEffect(uiState.isProfileChecked) {
+        if (uiState.isProfileChecked) {
+            startDestination = if (uiState.isProfileExists) {
+                NavRoutes.HOME
+            } else {
+                NavRoutes.SETUP_WIZARD
+            }
+        }
+    }
+    
+    // 等待检查完成
+    if (startDestination == null) {
+        PlaceholderScreen(
+            title = "三餐规划",
+            subtitle = "正在加载..."
+        )
+        return
+    }
+    
     NavHost(
         navController = navController,
-        startDestination = HOME,
+        startDestination = startDestination!!,
         modifier = modifier
     ) {
-        composable(HOME) {
-            PlaceholderScreen(
-                title = "三餐规划",
-                subtitle = "欢迎使用三餐规划应用\n功能正在开发中..."
-            )
+        // 设置向导
+        composable(NavRoutes.SETUP_WIZARD) {
+            SetupWizardScreen(navController = navController)
+        }
+        
+        // 首页
+        composable(NavRoutes.HOME) {
+            HomeScreen(navController = navController)
+        }
+        
+        // 体重追踪
+        composable(NavRoutes.WEIGHT) {
+            WeightScreen(navController = navController)
         }
         
         // 后续添加其他页面的路由
-        // composable(NavRoutes.WEIGHT) { WeightScreen() }
-        // composable(NavRoutes.INVENTORY) { InventoryScreen() }
-        // composable(NavRoutes.MEAL_PLAN) { MealPlanScreen() }
+        // composable(NavRoutes.INVENTORY) { InventoryScreen(navController) }
+        // composable(NavRoutes.MEAL_PLAN) { MealPlanScreen(navController) }
     }
 }
 
