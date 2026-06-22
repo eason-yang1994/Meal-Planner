@@ -71,14 +71,20 @@ fun AppNavHost(
     // 底部导航项
     val bottomNavItems = listOf(
         BottomNavItem(NavRoutes.HOME, Icons.Default.Home, "首页"),
-        BottomNavItem("meal_plan", Icons.Default.Restaurant, "饮食"),
-        BottomNavItem("fitness", Icons.Default.FitnessCenter, "运动"),
-        BottomNavItem("reports", Icons.Default.List, "报告"),
-        BottomNavItem("profile", Icons.Default.Person, "我的")
+        BottomNavItem(NavRoutes.MEAL_PLAN, Icons.Default.Restaurant, "饮食"),
+        BottomNavItem(NavRoutes.FITNESS, Icons.Default.FitnessCenter, "运动"),
+        BottomNavItem(NavRoutes.REPORTS, Icons.Default.List, "报告"),
+        BottomNavItem(NavRoutes.PROFILE, Icons.Default.Person, "我的")
     )
     
     // 需要显示底部导航的路由
-    val routesWithBottomNav = listOf(NavRoutes.HOME, "meal_plan", "fitness", "reports", "profile")
+    val routesWithBottomNav = listOf(
+        NavRoutes.HOME,
+        NavRoutes.MEAL_PLAN,
+        NavRoutes.FITNESS,
+        NavRoutes.REPORTS,
+        NavRoutes.PROFILE
+    )
     
     // 当前路由
     val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -160,24 +166,24 @@ fun AppNavHost(
             }
             
             // 饮食（三餐规划）
-            composable("meal_plan") {
+            composable(NavRoutes.MEAL_PLAN) {
                 com.mealplanner.mealplan.presentation.mealplan.MealPlanScreen(
                     navController = navController
                 )
             }
             
             // 运动
-            composable("fitness") {
+            composable(NavRoutes.FITNESS) {
                 com.mealplanner.fitness.presentation.fitness.FitnessScreen()
             }
             
             // 报告
-            composable("reports") {
+            composable(NavRoutes.REPORTS) {
                 com.mealplanner.reports.presentation.reports.ReportsScreen()
             }
             
             // 我的（个人资料）
-            composable("profile") {
+            composable(NavRoutes.PROFILE) {
                 ProfileScreen()
             }
         }

@@ -10,13 +10,14 @@ import java.time.format.DateTimeFormatter
 /**
  * Room 类型转换器
  * 
- * 用于转换 LocalDate、LocalDateTime 等类型
+ * 用于转换 LocalDate、LocalDateTime、List<String>、Map<String, Float> 等类型
+ * 存储格式：LocalDate/LocalDateTime → Long (Epoch)，List/Map → JSON String
  */
 class TypeConverters {
     
-    private val dateFormatter = DateTimeFormatter.ISO_LOCAL_DATE
-    private val dateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME
     private val gson = Gson()
+    
+    // ==================== LocalDate (存储为 Epoch Day Long) ====================
     
     /**
      * LocalDate 转 Long (Epoch Day)
@@ -33,6 +34,8 @@ class TypeConverters {
     fun toLocalDate(epochDay: Long?): LocalDate? {
         return epochDay?.let { LocalDate.ofEpochDay(it) }
     }
+    
+    // ==================== LocalDateTime (存储为 Epoch Second * 1000) ====================
     
     /**
      * LocalDateTime 转 Long (Epoch Milli)
@@ -52,37 +55,7 @@ class TypeConverters {
         }
     }
     
-    /**
-     * LocalDate 转 String
-     */
-    @TypeConverter
-    fun fromLocalDateToString(date: LocalDate?): String? {
-        return date?.format(dateFormatter)
-    }
-    
-    /**
-     * String 转 LocalDate
-     */
-    @TypeConverter
-    fun toLocalDateFromString(dateString: String?): LocalDate? {
-        return dateString?.let { LocalDate.parse(it, dateFormatter) }
-    }
-    
-    /**
-     * LocalDateTime 转 String
-     */
-    @TypeConverter
-    fun fromLocalDateTimeToString(dateTime: LocalDateTime?): String? {
-        return dateTime?.format(dateTimeFormatter)
-    }
-    
-    /**
-     * String 转 LocalDateTime
-     */
-    @TypeConverter
-    fun toLocalDateTimeFromString(dateTimeString: String?): LocalDateTime? {
-        return dateTimeString?.let { LocalDateTime.parse(it, dateTimeFormatter) }
-    }
+    // ==================== List<String> (存储为 JSON String) ====================
     
     /**
      * List<String> 转 JSON String
@@ -102,6 +75,8 @@ class TypeConverters {
             gson.fromJson(it, type)
         }
     }
+    
+    // ==================== Map<String, Float> (存储为 JSON String) ====================
     
     /**
      * Map<String, Float> 转 JSON String
