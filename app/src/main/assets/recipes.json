@@ -861,5 +861,769 @@
     "carbs": 45.0,
     "tags": ["早餐", "快手菜", "主食", "健康"],
     "cooking_time_minutes": 5
+  },
+  {
+    "id": "recipe_056",
+    "name": "煎蛋",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_011", "name": "鸡蛋", "amount": 2, "unit": "个"}
+    ],
+    "steps": ["平底锅加热", "放油", "打入鸡蛋", "小火煎至蛋白凝固", "出锅"],
+    "calories_per_serving": 180,
+    "protein": 13.0,
+    "fat": 14.0,
+    "carbs": 1.0,
+    "tags": ["早餐", "快手菜", "高蛋白"],
+    "cooking_time_minutes": 5
+  },
+  {
+    "id": "recipe_057",
+    "name": "白灼虾",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_021", "name": "虾", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["水烧开", "放入虾", "煮3分钟至变红", "捞出", "蘸料食用"],
+    "calories_per_serving": 150,
+    "protein": 28.0,
+    "fat": 2.0,
+    "carbs": 1.0,
+    "tags": ["午餐", "晚餐", "海鲜", "清淡", "高蛋白"],
+    "cooking_time_minutes": 10
+  },
+  {
+    "id": "recipe_058",
+    "name": "酸辣土豆丝",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_048", "name": "土豆", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["土豆切丝泡水", "热锅加油", "爆香干辣椒", "加入土豆丝翻炒", "加醋盐出锅"],
+    "calories_per_serving": 180,
+    "protein": 4.0,
+    "fat": 6.0,
+    "carbs": 30.0,
+    "tags": ["午餐", "晚餐", "素食", "下饭菜"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_059",
+    "name": "红烧日本豆腐",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_066", "name": "豆腐", "amount": 400, "unit": "g"}
+    ],
+    "steps": ["豆腐切段", "油炸定型", "调红烧汁", "放入豆腐焖煮", "收汁出锅"],
+    "calories_per_serving": 280,
+    "protein": 16.0,
+    "fat": 16.0,
+    "carbs": 15.0,
+    "tags": ["午餐", "晚餐", "素食", "家常菜"],
+    "cooking_time_minutes": 20
+  },
+  {
+    "id": "recipe_060",
+    "name": "炒腊肉",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_003", "name": "腊肉", "amount": 200, "unit": "g"},
+      {"food_id": "food_046", "name": "青椒", "amount": 100, "unit": "g"}
+    ],
+    "steps": ["腊肉蒸熟切片", "青椒切块", "热锅炒腊肉", "加入青椒翻炒", "出锅即可"],
+    "calories_per_serving": 450,
+    "protein": 20.0,
+    "fat": 35.0,
+    "carbs": 12.0,
+    "tags": ["午餐", "晚餐", "硬菜", "下饭菜"],
+    "cooking_time_minutes": 20
+  },
+  {
+    "id": "recipe_061",
+    "name": "冬瓜汤",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_138", "name": "冬瓜", "amount": 400, "unit": "g"}
+    ],
+    "steps": ["冬瓜切块", "水烧开", "加入冬瓜", "煮至透明", "加盐和葱花"],
+    "calories_per_serving": 60,
+    "protein": 2.0,
+    "fat": 1.0,
+    "carbs": 12.0,
+    "tags": ["午餐", "晚餐", "汤品", "清淡", "低卡"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_062",
+    "name": "炒米粉",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_033", "name": "米粉", "amount": 200, "unit": "g"},
+      {"food_id": "food_011", "name": "鸡蛋", "amount": 2, "unit": "个"}
+    ],
+    "steps": ["米粉泡软", "鸡蛋炒散", "加入米粉翻炒", "加酱油和豆芽", "炒匀出锅"],
+    "calories_per_serving": 420,
+    "protein": 15.0,
+    "fat": 10.0,
+    "carbs": 70.0,
+    "tags": ["早餐", "午餐", "主食", "快手菜"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_063",
+    "name": "清炒豆芽",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_136", "name": "豆芽", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["豆芽洗净沥水", "热锅加油", "爆香蒜末", "加入豆芽翻炒", "快速出锅"],
+    "calories_per_serving": 80,
+    "protein": 4.0,
+    "fat": 3.0,
+    "carbs": 10.0,
+    "tags": ["午餐", "晚餐", "素食", "快手菜", "低卡"],
+    "cooking_time_minutes": 8
+  },
+  {
+    "id": "recipe_064",
+    "name": "红烧牛腩",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_006", "name": "牛腩", "amount": 500, "unit": "g"}
+    ],
+    "steps": ["牛腩切块焯水", "炒糖色", "放入牛腩翻炒", "加酱油香料", "小火炖1.5小时"],
+    "calories_per_serving": 550,
+    "protein": 30.0,
+    "fat": 40.0,
+    "carbs": 10.0,
+    "tags": ["晚餐", "硬菜", "家常菜"],
+    "cooking_time_minutes": 120
+  },
+  {
+    "id": "recipe_065",
+    "name": "蒸蛋",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_011", "name": "鸡蛋", "amount": 3, "unit": "个"}
+    ],
+    "steps": ["鸡蛋打散", "加入温水", "过滤", "盖上保鲜膜", "蒸10分钟"],
+    "calories_per_serving": 180,
+    "protein": 19.0,
+    "fat": 12.0,
+    "carbs": 2.0,
+    "tags": ["早餐", "午餐", "清淡", "高蛋白"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_066",
+    "name": "炒花生米",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_072", "name": "花生", "amount": 200, "unit": "g"}
+    ],
+    "steps": ["冷油下花生", "小火慢炒", "听到啪啪声", "捞出沥油", "撒盐晾凉"],
+    "calories_per_serving": 600,
+    "protein": 26.0,
+    "fat": 48.0,
+    "carbs": 20.0,
+    "tags": ["午餐", "晚餐", "下酒菜"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_067",
+    "name": "西红柿鸡蛋面",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_033", "name": "挂面", "amount": 150, "unit": "g"},
+      {"food_id": "food_042", "name": "番茄", "amount": 200, "unit": "g"},
+      {"food_id": "food_011", "name": "鸡蛋", "amount": 2, "unit": "个"}
+    ],
+    "steps": ["面条煮熟", "番茄炒出汁", "加入炒好的鸡蛋", "面条装碗", "浇上番茄鸡蛋"],
+    "calories_per_serving": 480,
+    "protein": 18.0,
+    "fat": 14.0,
+    "carbs": 72.0,
+    "tags": ["午餐", "晚餐", "主食", "家常菜"],
+    "cooking_time_minutes": 20
+  },
+  {
+    "id": "recipe_068",
+    "name": "凉拌黄瓜",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_044", "name": "黄瓜", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["黄瓜拍碎", "加盐腌制", "沥水", "加蒜末醋", "拌匀即可"],
+    "calories_per_serving": 50,
+    "protein": 2.0,
+    "fat": 1.0,
+    "carbs": 8.0,
+    "tags": ["午餐", "晚餐", "凉菜", "低卡", "快手菜"],
+    "cooking_time_minutes": 10
+  },
+  {
+    "id": "recipe_069",
+    "name": "土豆饼",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_048", "name": "土豆", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["土豆蒸熟压泥", "加盐和胡椒粉", "搓成饼状", "煎至两面金黄", "出锅"],
+    "calories_per_serving": 280,
+    "protein": 5.0,
+    "fat": 10.0,
+    "carbs": 45.0,
+    "tags": ["早餐", "午餐", "主食"],
+    "cooking_time_minutes": 25
+  },
+  {
+    "id": "recipe_070",
+    "name": "清蒸带鱼",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_018", "name": "带鱼", "amount": 500, "unit": "g"}
+    ],
+    "steps": ["带鱼洗净切段", "抹盐腌制", "放入蒸锅", "大火蒸10分钟", "淋热油和酱油"],
+    "calories_per_serving": 250,
+    "protein": 25.0,
+    "fat": 15.0,
+    "carbs": 3.0,
+    "tags": ["晚餐", "海鲜", "清淡", "高蛋白"],
+    "cooking_time_minutes": 25
+  },
+  {
+    "id": "recipe_071",
+    "name": "炒青菜",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_057", "name": "白菜", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["青菜洗净", "热锅加油", "放入青菜", "快速翻炒", "加盐和蒜出锅"],
+    "calories_per_serving": 70,
+    "protein": 4.0,
+    "fat": 3.0,
+    "carbs": 8.0,
+    "tags": ["午餐", "晚餐", "素食", "快手菜", "低卡"],
+    "cooking_time_minutes": 8
+  },
+  {
+    "id": "recipe_072",
+    "name": "咖喱土豆鸡",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_001", "name": "鸡胸肉", "amount": 300, "unit": "g"},
+      {"food_id": "food_048", "name": "土豆", "amount": 200, "unit": "g"}
+    ],
+    "steps": ["鸡肉切块", "土豆切块", "炒香洋葱", "加入鸡块炒", "加咖喱块和水炖"],
+    "calories_per_serving": 420,
+    "protein": 30.0,
+    "fat": 16.0,
+    "carbs": 42.0,
+    "tags": ["午餐", "晚餐", "主食", "异国风味"],
+    "cooking_time_minutes": 35
+  },
+  {
+    "id": "recipe_073",
+    "name": "卤蛋",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_011", "name": "鸡蛋", "amount": 6, "unit": "个"}
+    ],
+    "steps": ["鸡蛋煮熟", "剥壳", "放入卤汁", "小火卤30分钟", "浸泡过夜"],
+    "calories_per_serving": 180,
+    "protein": 13.0,
+    "fat": 12.0,
+    "carbs": 2.0,
+    "tags": ["早餐", "加餐", "高蛋白", "冷盘"],
+    "cooking_time_minutes": 45
+  },
+  {
+    "id": "recipe_074",
+    "name": "萝卜炖排骨",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_010", "name": "猪排骨", "amount": 400, "unit": "g"},
+      {"food_id": "food_052", "name": "白萝卜", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["排骨焯水", "萝卜切块", "放入砂锅", "加水炖1小时", "调味出锅"],
+    "calories_per_serving": 380,
+    "protein": 26.0,
+    "fat": 22.0,
+    "carbs": 18.0,
+    "tags": ["午餐", "晚餐", "汤品", "家常菜"],
+    "cooking_time_minutes": 90
+  },
+  {
+    "id": "recipe_075",
+    "name": "炒年糕",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_144", "name": "年糕", "amount": 300, "unit": "g"},
+      {"food_id": "food_042", "name": "番茄", "amount": 100, "unit": "g"}
+    ],
+    "steps": ["年糕煮熟", "番茄炒汁", "加入年糕翻炒", "加盐和葱花", "炒匀出锅"],
+    "calories_per_serving": 380,
+    "protein": 8.0,
+    "fat": 6.0,
+    "carbs": 75.0,
+    "tags": ["午餐", "晚餐", "主食", "快手菜"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_076",
+    "name": "白切猪肝",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_009", "name": "猪肝", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["猪肝洗净", "放入开水锅", "煮10分钟", "捞出切片", "蘸料食用"],
+    "calories_per_serving": 180,
+    "protein": 26.0,
+    "fat": 8.0,
+    "carbs": 4.0,
+    "tags": ["午餐", "晚餐", "高蛋白", "补铁"],
+    "cooking_time_minutes": 20
+  },
+  {
+    "id": "recipe_077",
+    "name": "炒花菜",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_059", "name": "花菜", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["花菜切小朵", "热锅加油", "放入花菜翻炒", "加盐和蒜末", "出锅即可"],
+    "calories_per_serving": 90,
+    "protein": 4.0,
+    "fat": 4.0,
+    "carbs": 10.0,
+    "tags": ["午餐", "晚餐", "素食", "快手菜", "低卡"],
+    "cooking_time_minutes": 10
+  },
+  {
+    "id": "recipe_078",
+    "name": "红烧黄鱼",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_184", "name": "黄鱼", "amount": 500, "unit": "g"}
+    ],
+    "steps": ["黄鱼洗净", "抹盐腌制", "煎至两面黄", "加入酱油糖", "加水焖煮10分钟"],
+    "calories_per_serving": 220,
+    "protein": 32.0,
+    "fat": 10.0,
+    "carbs": 5.0,
+    "tags": ["晚餐", "海鲜", "家常菜", "高蛋白"],
+    "cooking_time_minutes": 30
+  },
+  {
+    "id": "recipe_079",
+    "name": "凉拌西兰花",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_058", "name": "西兰花", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["西兰花焯水", "过冷水", "加入蒜末", "加盐和醋", "拌匀即可"],
+    "calories_per_serving": 80,
+    "protein": 7.0,
+    "fat": 3.0,
+    "carbs": 12.0,
+    "tags": ["午餐", "晚餐", "素食", "凉菜", "低卡"],
+    "cooking_time_minutes": 12
+  },
+  {
+    "id": "recipe_080",
+    "name": "煎牛排",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_005", "name": "牛里脊", "amount": 200, "unit": "g"}
+    ],
+    "steps": ["牛排解冻", "抹盐和黑胡椒", "平底锅加热", "每面煎2分钟", "静置5分钟切片"],
+    "calories_per_serving": 350,
+    "protein": 32.0,
+    "fat": 24.0,
+    "carbs": 0.0,
+    "tags": ["晚餐", "西餐", "高蛋白"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_081",
+    "name": "炒饭团",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_028", "name": "白米饭", "amount": 300, "unit": "g"},
+      {"food_id": "food_011", "name": "鸡蛋", "amount": 1, "unit": "个"}
+    ],
+    "steps": ["米饭捏成团", "鸡蛋打散", "饭团裹蛋液", "煎至金黄", "出锅"],
+    "calories_per_serving": 420,
+    "protein": 12.0,
+    "fat": 10.0,
+    "carbs": 72.0,
+    "tags": ["早餐", "午餐", "主食", "创意菜"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_082",
+    "name": "酸菜鱼",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_017", "name": "草鱼", "amount": 600, "unit": "g"}
+    ],
+    "steps": ["鱼切片腌制", "炒酸菜", "加水煮开", "放入鱼片", "淋热油辣椒"],
+    "calories_per_serving": 320,
+    "protein": 32.0,
+    "fat": 18.0,
+    "carbs": 8.0,
+    "tags": ["晚餐", "辣", "海鲜", "硬菜"],
+    "cooking_time_minutes": 35
+  },
+  {
+    "id": "recipe_083",
+    "name": "炒藕片",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_053", "name": "莲藕", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["莲藕去皮切片", "泡水防黑", "热锅加油", "翻炒莲藕", "加醋和盐出锅"],
+    "calories_per_serving": 120,
+    "protein": 4.0,
+    "fat": 5.0,
+    "carbs": 20.0,
+    "tags": ["午餐", "晚餐", "素食", "清脆"],
+    "cooking_time_minutes": 12
+  },
+  {
+    "id": "recipe_084",
+    "name": "鸡肉沙拉",
+    "category": "SALAD",
+    "ingredients": [
+      {"food_id": "food_001", "name": "鸡胸肉", "amount": 150, "unit": "g"},
+      {"food_id": "food_083", "name": "苹果", "amount": 100, "unit": "g"}
+    ],
+    "steps": ["鸡肉煮熟撕丝", "苹果切丁", "加入沙拉酱", "拌匀", "即可食用"],
+    "calories_per_serving": 250,
+    "protein": 25.0,
+    "fat": 8.0,
+    "carbs": 22.0,
+    "tags": ["午餐", "晚餐", "沙拉", "减肥餐", "高蛋白"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_085",
+    "name": "红烧日本豆腐",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_066", "name": "豆腐", "amount": 400, "unit": "g"}
+    ],
+    "steps": ["豆腐切段", "油炸至金黄", "调红烧汁", "放入豆腐", "收汁出锅"],
+    "calories_per_serving": 300,
+    "protein": 16.0,
+    "fat": 18.0,
+    "carbs": 16.0,
+    "tags": ["午餐", "晚餐", "素食", "家常菜"],
+    "cooking_time_minutes": 20
+  },
+  {
+    "id": "recipe_086",
+    "name": "炒年糕条",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_144", "name": "年糕", "amount": 300, "unit": "g"},
+      {"food_id": "food_046", "name": "青椒", "amount": 100, "unit": "g"}
+    ],
+    "steps": ["年糕煮软", "热锅加油", "炒青椒", "加入年糕", "加酱油翻炒"],
+    "calories_per_serving": 350,
+    "protein": 7.0,
+    "fat": 6.0,
+    "carbs": 70.0,
+    "tags": ["午餐", "晚餐", "主食", "快手菜"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_087",
+    "name": "煮玉米",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_037", "name": "玉米", "amount": 2, "unit": "根"}
+    ],
+    "steps": ["玉米洗净", "放入锅中", "加水没过", "煮20分钟", "捞出即可"],
+    "calories_per_serving": 220,
+    "protein": 8.0,
+    "fat": 4.0,
+    "carbs": 45.0,
+    "tags": ["早餐", "午餐", "主食", "健康"],
+    "cooking_time_minutes": 25
+  },
+  {
+    "id": "recipe_088",
+    "name": "炒粉丝",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_145", "name": "粉丝", "amount": 100, "unit": "g"},
+      {"food_id": "food_011", "name": "鸡蛋", "amount": 2, "unit": "个"}
+    ],
+    "steps": ["粉丝泡软", "鸡蛋炒散", "加入粉丝", "加酱油翻炒", "出锅即可"],
+    "calories_per_serving": 380,
+    "protein": 12.0,
+    "fat": 8.0,
+    "carbs": 65.0,
+    "tags": ["午餐", "晚餐", "主食", "快手菜"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_089",
+    "name": "清炒南瓜",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_139", "name": "南瓜", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["南瓜去皮切块", "热锅加油", "放入南瓜翻炒", "加盐和糖", "炒至软糯"],
+    "calories_per_serving": 120,
+    "protein": 3.0,
+    "fat": 4.0,
+    "carbs": 22.0,
+    "tags": ["午餐", "晚餐", "素食", "甜品"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_090",
+    "name": "虾仁蒸蛋",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_011", "name": "鸡蛋", "amount": 3, "unit": "个"},
+      {"food_id": "food_021", "name": "虾仁", "amount": 100, "unit": "g"}
+    ],
+    "steps": ["鸡蛋打散", "加入温水", "过滤", "摆上虾仁", "蒸10分钟"],
+    "calories_per_serving": 220,
+    "protein": 25.0,
+    "fat": 13.0,
+    "carbs": 4.0,
+    "tags": ["午餐", "晚餐", "清淡", "高蛋白"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_091",
+    "name": "炒空心菜",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_127", "name": "空心菜", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["空心菜洗净", "热锅加油", "蒜末爆香", "加入空心菜", "快速翻炒出锅"],
+    "calories_per_serving": 80,
+    "protein": 5.0,
+    "fat": 3.0,
+    "carbs": 10.0,
+    "tags": ["午餐", "晚餐", "素食", "快手菜", "低卡"],
+    "cooking_time_minutes": 8
+  },
+  {
+    "id": "recipe_092",
+    "name": "萝卜汤",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_052", "name": "白萝卜", "amount": 400, "unit": "g"}
+    ],
+    "steps": ["萝卜切块", "水烧开", "加入萝卜", "煮至透明", "加盐和葱花"],
+    "calories_per_serving": 60,
+    "protein": 2.0,
+    "fat": 1.0,
+    "carbs": 14.0,
+    "tags": ["午餐", "晚餐", "汤品", "清淡", "低卡"],
+    "cooking_time_minutes": 20
+  },
+  {
+    "id": "recipe_093",
+    "name": "炒蘑菇",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_060", "name": "蘑菇", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["蘑菇洗净切片", "热锅加油", "放入蘑菇", "翻炒至软", "加盐和胡椒"],
+    "calories_per_serving": 100,
+    "protein": 7.0,
+    "fat": 4.0,
+    "carbs": 8.0,
+    "tags": ["午餐", "晚餐", "素食", "快手菜", "低卡"],
+    "cooking_time_minutes": 10
+  },
+  {
+    "id": "recipe_094",
+    "name": "红烧鸡腿",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_168", "name": "鸡腿", "amount": 400, "unit": "g"}
+    ],
+    "steps": ["鸡腿划刀", "煎至金黄", "加入酱油糖", "加水焖煮", "收汁出锅"],
+    "calories_per_serving": 480,
+    "protein": 32.0,
+    "fat": 28.0,
+    "carbs": 18.0,
+    "tags": ["午餐", "晚餐", "家常菜", "孩子爱吃"],
+    "cooking_time_minutes": 35
+  },
+  {
+    "id": "recipe_095",
+    "name": "凉拌豆腐",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_066", "name": "豆腐", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["豆腐切块焯水", "过冷水", "加入酱油", "加葱花和香油", "拌匀即可"],
+    "calories_per_serving": 150,
+    "protein": 14.0,
+    "fat": 8.0,
+    "carbs": 6.0,
+    "tags": ["午餐", "晚餐", "凉菜", "清淡", "高蛋白"],
+    "cooking_time_minutes": 10
+  },
+  {
+    "id": "recipe_096",
+    "name": "炒山药",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_050", "name": "山药", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["山药去皮切片", "泡水防黑", "热锅加油", "翻炒山药", "加盐和醋出锅"],
+    "calories_per_serving": 120,
+    "protein": 4.0,
+    "fat": 4.0,
+    "carbs": 22.0,
+    "tags": ["午餐", "晚餐", "素食", "养生"],
+    "cooking_time_minutes": 12
+  },
+  {
+    "id": "recipe_097",
+    "name": "煎豆腐",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_066", "name": "豆腐", "amount": 400, "unit": "g"}
+    ],
+    "steps": ["豆腐切块", "沥干水分", "平底锅加热", "煎至两面黄", "淋酱油出锅"],
+    "calories_per_serving": 200,
+    "protein": 16.0,
+    "fat": 12.0,
+    "carbs": 8.0,
+    "tags": ["午餐", "晚餐", "素食", "家常菜", "高蛋白"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_098",
+    "name": "炒腊肉饭",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_028", "name": "白米饭", "amount": 300, "unit": "g"},
+      {"food_id": "food_003", "name": "腊肉", "amount": 100, "unit": "g"}
+    ],
+    "steps": ["腊肉蒸熟切丁", "热锅炒腊肉", "加入米饭", "炒匀调味", "出锅"],
+    "calories_per_serving": 520,
+    "protein": 16.0,
+    "fat": 25.0,
+    "carbs": 60.0,
+    "tags": ["午餐", "晚餐", "主食", "硬菜"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_099",
+    "name": "煮红薯",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_049", "name": "红薯", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["红薯洗净", "放入锅中", "加水没过", "煮25分钟", "捞出即可"],
+    "calories_per_serving": 260,
+    "protein": 4.0,
+    "fat": 1.0,
+    "carbs": 62.0,
+    "tags": ["早餐", "午餐", "主食", "健康"],
+    "cooking_time_minutes": 30
+  },
+  {
+    "id": "recipe_100",
+    "name": "炒韭黄",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_126", "name": "韭菜", "amount": 200, "unit": "g"}
+    ],
+    "steps": ["韭黄洗净切段", "热锅加油", "放入韭黄", "快速翻炒", "加盐和生抽"],
+    "calories_per_serving": 80,
+    "protein": 4.0,
+    "fat": 4.0,
+    "carbs": 8.0,
+    "tags": ["午餐", "晚餐", "素食", "快手菜", "低卡"],
+    "cooking_time_minutes": 8
+  },
+  {
+    "id": "recipe_101",
+    "name": "清炒丝瓜",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_140", "name": "丝瓜", "amount": 300, "unit": "g"}
+    ],
+    "steps": ["丝瓜去皮切块", "热锅加油", "放入丝瓜", "翻炒至软", "加盐和鸡精"],
+    "calories_per_serving": 70,
+    "protein": 2.0,
+    "fat": 3.0,
+    "carbs": 10.0,
+    "tags": ["午餐", "晚餐", "素食", "清淡", "低卡"],
+    "cooking_time_minutes": 10
+  },
+  {
+    "id": "recipe_102",
+    "name": "红烧猪手",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_010", "name": "猪蹄", "amount": 600, "unit": "g"}
+    ],
+    "steps": ["猪蹄焯水", "炒糖色", "放入猪蹄", "加酱油料酒", "小火炖1.5小时"],
+    "calories_per_serving": 580,
+    "protein": 28.0,
+    "fat": 42.0,
+    "carbs": 15.0,
+    "tags": ["晚餐", "硬菜", "胶原蛋白"],
+    "cooking_time_minutes": 120
+  },
+  {
+    "id": "recipe_103",
+    "name": "炒木耳山药",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_121", "name": "黑木耳", "amount": 100, "unit": "g"},
+      {"food_id": "food_050", "name": "山药", "amount": 200, "unit": "g"}
+    ],
+    "steps": ["木耳泡发", "山药去皮切片", "热锅加油", "翻炒食材", "调味出锅"],
+    "calories_per_serving": 130,
+    "protein": 5.0,
+    "fat": 4.0,
+    "carbs": 22.0,
+    "tags": ["午餐", "晚餐", "素食", "养生"],
+    "cooking_time_minutes": 15
+  },
+  {
+    "id": "recipe_104",
+    "name": "白灼金针菇",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_062", "name": "金针菇", "amount": 200, "unit": "g"}
+    ],
+    "steps": ["金针菇洗净", "开水焯熟", "捞出摆盘", "淋酱油", "撒葱花"],
+    "calories_per_serving": 60,
+    "protein": 3.0,
+    "fat": 2.0,
+    "carbs": 10.0,
+    "tags": ["午餐", "晚餐", "素食", "清淡", "低卡"],
+    "cooking_time_minutes": 10
+  },
+  {
+    "id": "recipe_105",
+    "name": "炒五香豆腐干",
+    "category": "HOME_COOKED",
+    "ingredients": [
+      {"food_id": "food_068", "name": "豆腐干", "amount": 200, "unit": "g"}
+    ],
+    "steps": ["豆腐干切条", "热锅加油", "放入豆腐干", "加五香粉", "翻炒出锅"],
+    "calories_per_serving": 220,
+    "protein": 20.0,
+    "fat": 12.0,
+    "carbs": 8.0,
+    "tags": ["午餐", "晚餐", "素食", "高蛋白", "下饭菜"],
+    "cooking_time_minutes": 12
   }
 ]
